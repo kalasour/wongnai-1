@@ -41,14 +41,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="OgP-KS-JG4">
-                                            <rect key="frame" x="357.66666666666674" y="16" width="14" height="12"/>
+                                            <rect key="frame" x="357.66666666666669" y="16" width="14" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="0Te-lZ-BGy"/>
                                                 <constraint firstAttribute="width" constant="14" id="Qsb-hD-gBz"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmZ-FJ-a1p">
-                                            <rect key="frame" x="375.66666666666674" y="16" width="26.333333333333314" height="12"/>
+                                            <rect key="frame" x="375.66666666666669" y="16" width="26.333333333333314" height="12"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -84,6 +84,27 @@
                                     <outlet property="voted" destination="SmZ-FJ-a1p" id="gc8-1A-qI2"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InsertCell" id="7eR-YI-ouS">
+                                <rect key="frame" x="0.0" y="140" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7eR-YI-ouS" id="p3x-7m-YEf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-insertion" translatesAutoresizingMaskIntoConstraints="NO" id="9d7-L8-YDG">
+                                            <rect key="frame" x="27" y="-3.3333333333333286" width="360" height="50.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="360" id="iFl-Wj-FfD"/>
+                                                <constraint firstAttribute="height" constant="50" id="pUp-ga-dvm"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9d7-L8-YDG" firstAttribute="centerX" secondItem="p3x-7m-YEf" secondAttribute="centerX" id="FMi-dk-bRZ"/>
+                                        <constraint firstItem="9d7-L8-YDG" firstAttribute="centerY" secondItem="p3x-7m-YEf" secondAttribute="centerY" id="fDP-wP-iqw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="S8w-6d-69X" id="8ep-Wm-xvS"/>
@@ -111,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image-insertion" width="360" height="50"/>
         <image name="like" width="18" height="18"/>
     </resources>
 </document>
