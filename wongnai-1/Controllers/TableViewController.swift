@@ -52,4 +52,17 @@ class TableViewController: UITableViewController {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView,willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let unwrapPhotos = gotData?.getPhotos() {
+            let total = unwrapPhotos.count
+            if(indexPath.row + 1 == total) {
+                gotData?.getNextPage(handler: {
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                })
+            }
+        }
+    }
 }
