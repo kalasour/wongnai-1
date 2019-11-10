@@ -21,6 +21,16 @@ class TableViewController: UITableViewController {
         })
     }
     
+    @IBAction private func refresh(_ sender: UIRefreshControl) {
+        gotData?.refresh(handler: {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                sender.endRefreshing()
+            }
+        })
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
