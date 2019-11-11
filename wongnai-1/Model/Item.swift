@@ -59,7 +59,7 @@ class Item: Codable {
     }
     
     public func getNextPage(handler: @escaping (()->Void)) {
-        if let url = URL(string: "https://api.500px.com/v1/photos?feature=popular&page=\((self.current_page ?? 0)+1)") {
+        if let url = URL(string: "https://api.500px.com/v1/photos?feature=popular&page=\((self.current_page ?? 0) + 1)") {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data {
                     do {

@@ -49,9 +49,9 @@ class TableViewController: UITableViewController {
         if(i % insertEvery != 0){
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as? ItemTableViewCell else { return UITableViewCell()
             }
-            
             if let unwrapData = gotData {
-                let calIndex = (i-(i/insertEvery))-1
+                //calculate index to insert row
+                let calIndex = (i - (i / insertEvery)) - 1
                 cell.setProps(photo: unwrapData.getPhotos()[calIndex])
             }
             return cell
